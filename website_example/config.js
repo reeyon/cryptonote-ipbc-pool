@@ -1,13 +1,16 @@
-var api = "http://poolhost:8117";
+var api = "https://yourpool.com:8119";
 
-var email = "support@poolhost.com";
-var telegram = "https://t.me/YourPool";
-var discord = "https://discordapp.com/invite/YourPool";
+var coinDecimalPlaces = 2;
 
-var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
+var email = "";
+var telegram = "";
+var discord = "";
 
-var blockchainExplorer = "http://chainradar.com/{symbol}/block/{id}";
-var transactionExplorer = "http://chainradar.com/{symbol}/transaction/{id}";
+var marketCurrencies = ["{symbol}-BTC"];
 
-var themeCss = "themes/default.css";
+var blockchainExplorer = "https://explorer.ipbc.rocks/block/{id}";
+var transactionExplorer = "https://explorer.ipbc.rocks/tx/{id}";
+
+var themeCss = "themes/ipbc.css";
+var themeCssDark = "themes/ipbc_dark.css";
 var defaultLang = 'en';

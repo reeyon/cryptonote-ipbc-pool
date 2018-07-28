@@ -81,7 +81,7 @@
     "address": "address",
     "addrPaymentId": "paymentID",
     "addrDiff": "diff",
-    "password": "Password",
+    "password": "Password/Rig ID",
     "passwordDesc": "This is your worker name",
     "emailNotifications": "Email Notifications",
     "miningPorts": "Mining Ports",

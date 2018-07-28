@@ -5,14 +5,14 @@
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
                 <div><i class="fa fa-cloud"></i> <span tkey="miningPoolHost">Mining Pool Address</span>: <span id="miningPoolHost"></span></div>
-                <div><i class="fa fa-cubes"></i> <span tkey="cnAlgorithm">Algorithm</span>: <span id="cnAlgorithm"></span></div>
+                <div><i class="fa fa-cubes"></i> <span tkey="cnAlgorithm">Algorithm</span>: Cryptonight Saber (AKA Cryptonight Heavy-Tube)</div>
             </div>
         </div>
 
         <h4 class="push-up-15"><span tkey="username">Username<span></h4>
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
-                <div><i class="fa fa-key"></i> <span tkey="usernameDesc">This is your wallet address</span></div>
+                <div><i class="fa fa-key"></i> <span tkey="usernameDesc">This is your wallet address</span>(integrated address supported)</div>
                 <div id="paymentId"><i class="fa fa-exchange"></i> <span tkey="paymentId">Exchange Payment ID</span>: <span><u tkey="address">address</u><span id="paymentIdSeparator">.</span><u tkey="addrPaymentId">paymentID</u></span></div>
                 <div id="fixedDiff"><i class="fa fa-wrench"></i> <span tkey="fixedDiff">Difficulty locking</span>: <span><u tkey="address">address</u><span id="fixedDiffSeparator">+</span><u tkey="addrDiff">diff</u></span></div>
             </div>
@@ -111,9 +111,9 @@
             </thead>
             <tbody id="miningApps_rows">
 	    
-	    <!-- XMR Stak -->
+	    <!-- XMR-stak -->
             <tr class="appInfo">
-                <td class="miningAppTitle">XMR Stak</td>
+                <td class="miningAppTitle">XMR-stak</td>
                 <td>CPU & GPU (AMD/NVIDIA)</td>
                 <td>Easy to use CPU + GPU Mining App</td>
                 <td><a class="btn btn-success" target="_blank" href="https://github.com/fireice-uk/xmr-stak/releases/latest"><span tkey="download">Download</span></a></td>
@@ -123,7 +123,7 @@
                 <td colspan="5">
                     <div class="collapse" id="xmrstak">
 		
-<pre><code>"pool_list": [
+<pre>"pool_list": [
     {
         "pool_address": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "wallet_address": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
@@ -135,114 +135,103 @@
         "pool_weight": 1
     },
 ],
-"currency": "<span id="xmrstakAlgo"></span>",</code></pre>
+"currency": "bittube",</pre>
 
                     </div>
                 </td>
             </tr>
-	    
-	    <!-- XMRig -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRig</td>
-                <td>CPU</td>
-                <td>Ligthweight but powerful CPU Mining App</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig/releases/latest"><span tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "keepalive": true,
-        "nicehash": false,
-        "variant": 1
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
 	    <!-- XMRig-AMD -->
             <tr class="appInfo">
                 <td class="miningAppTitle">XMRig-AMD</td>
                 <td>OpenCL (AMD)</td>
-                <td>XMRIG version for AMD GPU</td>
+                <td>Ligthweight but powerful GPU Mining App</td>
                 <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-amd/releases/latest"><span tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-amd" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrigAMD" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
-                    <div class="collapse" id="xmrig-amd">
+                    <div class="collapse" id="xmrigAMD">
 		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
-        "keepalive": true,
-        "nicehash": false,
-        "variant": 1
-    }
-],</code></pre>
+<pre>"algo": "cryptonight-heavy",
+"pools": [
+	{
+		"url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
+		"user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
+		"pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+		"keepalive": true,
+		"nicehash": false
+		"variant" : "tube",
+	}
+],</pre>
 
                     </div>
                 </td>
-            </tr>
-
-	    <!-- XMRig-NVIDIA -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRig-NVIDIA</td>
-                <td>Cuda (Nvidia)</td>
-                <td>XMRIG version for Nvidia GPU</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-nvidia/releases/latest"><span tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-nvidia" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig-nvidia">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
-        "keepalive": true,
-        "nicehash": false,
-        "variant": 1
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
+            </tr>	    
 	    <!-- XMRigCC -->
             <tr class="appInfo">
                 <td class="miningAppTitle">XMRigCC</td>
                 <td>CPU</td>
-                <td>XMRIG Fork, optimized with remote control</td>
+                <td>Ligthweight but powerful CPU Mining App</td>
                 <td><a class="btn btn-success" target="_blank" href="https://github.com/Bendr0id/xmrigCC/releases/latest"><span tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-cc" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrigcc" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
-                    <div class="collapse" id="xmrig-cc">
+                    <div class="collapse" id="xmrigcc">
 		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "keepalive": true,
-        "nicehash": false
-    },
-],</code></pre>
+<pre>"algo": "cryptonight-heavy",
+"pow-variant" : "tube",
+"pools": [
+	{
+		"url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
+		"user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
+		"pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+		"keepalive": true,
+		"nicehash": false
+	}
+],</pre>
+
+                    </div>
+                </td>
+            </tr>
+
+	    <!-- Cast XMR -->
+            <tr class="appInfo">
+                <td class="miningAppTitle">Cast XMR</td>
+                <td>OpenCL (AMD)</td>
+                <td>Optimized for Vega and Polaris based GPUs</td>
+                <td><a class="btn btn-success" target="_blank" href="http://www.gandalph3000.com/"><span tkey="download">Download</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#castxmr" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
+            </tr>
+            <tr class="appConfig">
+                <td colspan="5">
+                    <div class="collapse" id="castxmr">
+		
+<pre>cast_xmr -S <span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> -u <span class="exampleLogin">YOUR_WALLET_ADDRESS</span> -p <span class="examplePassword">YOUR_WORKER_NAME</span> --algo=5</pre>
+
+                    </div>
+                </td>
+            </tr>
+
+	    <!-- SRBMiner -->
+            <tr class="appInfo">
+                <td class="miningAppTitle">SRBMiner</td>
+                <td>OpenCL (AMD)</td>
+                <td>Cryptonight AMD GPU Miner</td>
+                <td><a class="btn btn-success" target="_blank" href="http://www.srbminer.com/download.html"><span tkey="download">Download</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#srbminer" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
+            </tr>
+            <tr class="appConfig">
+                <td colspan="5">
+                    <div class="collapse" id="srbminer">
+		
+<pre>"cryptonight_type" : "bittubev2",
+{"pool" : "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>", "wallet" : "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>", "password" : "<span class="examplePassword">YOUR_WORKER_NAME</span>"},
+</pre>
+
+                    </div>
+                </td>
+            </tr>
 
                     </div>
                 </td>

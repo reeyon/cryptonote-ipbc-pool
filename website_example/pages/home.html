@@ -1,8 +1,6 @@
 <br/>
-
 <!-- Statistics -->
 <div id="poolStats" class="row">
-
     <!-- Pool Hash Rate -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
@@ -98,7 +96,7 @@
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
-                <span class="fa fa-dollar"></span>
+                <span class="fa fa-money"></span>
             </div>
             <div class="content">
                 <div class="text"><span tkey="networkLastReward">Last Reward</span></div>
@@ -124,7 +122,7 @@
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
-                <span class="fa fa-dollar"></span>
+                <span class="fa fa-percent"></span>
             </div>
             <div class="content">
                 <div class="text"><span tkey="poolFee">Pool Fee</span></div>
@@ -137,7 +135,7 @@
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
-                <span class="fa fa-dollar"></span>
+                <span class="fa fa-usd"></span>
             </div>
             <div class="content">
                 <div class="text"><span tkey="paymentsMinimum">Minimum Payout</span></div>
@@ -324,6 +322,7 @@ function createCharts() {
                         data: graphData[graphType].values,
                         dataType: graphType,
                         fill: true,
+						pointStyle: 'star',
                         backgroundColor: bgcolor,
                         borderColor: bordercolor,
                         borderWidth: borderwidth
@@ -334,7 +333,7 @@ function createCharts() {
                     responsive: true,
                     maintainAspectRatio: false,
                     legend: { display: false },
-                    elements: { point: { radius: 0, hitRadius: 10, hoverRadius: 5 } },
+                    elements: { point: { radius: 1, hitRadius: 10, hoverRadius: 5 } },
                     scales: {
                         xAxes: [{
                             display: false,
@@ -357,6 +356,8 @@ function createCharts() {
                         padding: { top: 5, left: 10, right: 10, bottom: 10 }
                     },
                     tooltips: {
+						intersect: false,
+						mode: 'index',
                         callbacks: {
                             label: function(tooltipItem, data) {
                                 var dataType = data.datasets[tooltipItem.datasetIndex].dataType || '';

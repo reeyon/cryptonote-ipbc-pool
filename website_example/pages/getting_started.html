@@ -171,7 +171,7 @@
             <tr class="appInfo">
                 <td class="miningAppTitle">XMRigCC</td>
                 <td>CPU</td>
-                <td>Ligthweight but powerful CPU Mining App</td>
+                <td>CPU Miner with Command&Control (CC) Server and Monitoring</td>
                 <td><a class="btn btn-success" target="_blank" href="https://github.com/Bendr0id/xmrigCC/releases/latest"><span tkey="download">Download</span></a></td>
                 <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrigcc" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
             </tr>
@@ -180,7 +180,35 @@
                     <div class="collapse" id="xmrigcc">
 		
 <pre>"algo": "cryptonight-heavy",
-"pow-variant" : "tube",
+"pow-variant" : "ipbc",
+"pools": [
+	{
+		"url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
+		"user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
+		"pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+		"keepalive": true,
+		"nicehash": false
+	}
+],</pre>
+
+                    </div>
+                </td>
+            </tr>
+
+	    <!-- XMRigCC-amd -->
+            <tr class="appInfo">
+                <td class="miningAppTitle">XMRigCC-amd</td>
+                <td>OpenCL (AMD)</td>
+                <td>GPU Miner with Command&Control (CC) Server and Monitoring</td>
+                <td><a class="btn btn-success" target="_blank" href="https://github.com/Bendr0id/xmrigCC-amd/releases/latest"><span tkey="download">Download</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrigccamd" aria-expanded="true" aria-controls="collapseExample"><span tkey="showConfig">See more</span></a></td>
+            </tr>
+            <tr class="appConfig">
+                <td colspan="5">
+                    <div class="collapse" id="xmrigccamd">
+		
+<pre>"algo": "cryptonight-heavy",
+"pow-variant" : "ipbc",
 "pools": [
 	{
 		"url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",

@@ -1,7 +1,7 @@
-cryptonote-nodejs-pool
+cryptonote-ipbc-pool
 ======================
 
-High performance Node.js (with native C addons) mining pool for CryptoNote based coins. Comes with lightweight example front-end script which uses the pool's AJAX API. Support for Cryptonight (Original, Monero v7, Stellite v7), Cryptonight Light (Original, Aeon v7, IPBC) and Cryptonight Heavy (Sumokoin) algorithms.
+High performance Node.js (with native C addons) mining pool for IPBC.
 
 
 #### Table of Contents
@@ -31,7 +31,7 @@ Features
 * TCP (stratum-like) protocol for server-push based jobs
   * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
     block percent, and less error prone
-* Support for Cryptonight (Original, Monero v7, Stellite v7), Cryptonight Light (Original, Aeon v7, IPBC) and Cryptonight Heavy (Sumokoin) algorithms.
+* Support for Cryptonight Heavy-Tube (IPBC and Bittube)
 * IP banning to prevent low-diff share attacks
 * Socket flooding detection
 * Share trust algorithm to reduce share validation hashing CPU load
@@ -40,7 +40,7 @@ Features
 * Miner login (wallet address) validation
 * Workers identification (specify worker name as the password)
 * Variable difficulty / share limiter
-* Set fixed difficulty on miner client by passing "address" param with "+[difficulty]" postfix
+* Set fixed difficulty on miner client by passing "address" param with ".[difficulty]" postfix
 * Modular components for horizontal scaling (pool server, database, stats/API, payment processing, front-end)
 * SSL support for both pool and API servers
 * RBPPS (PROP) payment system
@@ -94,19 +94,13 @@ Features
 Community / Support
 ===
 
-* [GitHub Wiki](https://github.com/dvandal/cryptonote-nodejs-pool/wiki)
-* [GitHub Issues](https://github.com/dvandal/cryptonote-nodejs-pool/issues)
-* [Telegram Group](http://t.me/CryptonotePool)
+* [GitHub Wiki](https://github.com/IPBCrocks/cryptonote-ipbc-pool/wiki)
+* [GitHub Issues](https://github.com/IPBCrocks/cryptonote-ipbc-pool/issues)
+* [Discord Group](https://discord.gg/g7cZmJ9)
 
 #### Pools Using This Software
 
-* https://imaginary.stream/
-* https://graft.anypool.net/
-* https://graft.dark-mine.su/
-* http://itns.proxpool.com/
-* https://bytecoin.pt
-* http://ita.minexmr24.ru/
-* https://pool.croatpirineus.cat
+* https://mining.ipbc.rocks
 
 Usage
 ===
@@ -155,7 +149,7 @@ sudo su - your-user
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/dvandal/cryptonote-nodejs-pool.git pool
+git clone https://github.com/IPBCrocks/cryptonote-ipbc-pool.git pool
 cd pool
 
 npm update
@@ -742,27 +736,11 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 * To keep your pool node script running in background, logging to file, and automatically restarting if it crashes - I suggest using [forever](https://github.com/nodejitsu/forever) or [PM2](https://github.com/Unitech/pm2)
 
 
-Donations
----------
-
-Thanks for supporting my works on this project! If you want to make a donation to [Daniel Vandal](https://github.com/dvandal/), the developper of this project, you can send any amount of your choice to one of theses addresses:
-
-* Bitcoin (BTC): `17XRyHm2gWAj2yfbyQgqxm25JGhvjYmQjm`
-* Bitcoin Cash (BCH): `qpl0gr8u3yu7z4nzep955fqy3w8m6w769sec08u3dp`
-* Ethereum (ETH): `0x83ECF65934690D132663F10a2088a550cA201353`
-* Litecoin (LTC): `LS9To9u2C95VPHKauRMEN5BLatC8C1k4F1`
-* Monero (XMR): `49WyMy9Q351C59dT913ieEgqWjaN12dWM5aYqJxSTZCZZj1La5twZtC3DyfUsmVD3tj2Zud7m6kqTVDauRz53FqA9zphHaj`
-* Graft (GRFT): `GBqRuitSoU3PFPBAkXMEnLdBRWXH4iDSD6RDxnQiEFjVJhWUi1UuqfV5EzosmaXgpPGE6JJQjMYhZZgWY8EJQn8jQTsuTit`
-* Haven (XHV): `hvxy2RAzE7NfXPLE3AmsuRaZztGDYckCJ14XMoWa6BUqGrGYicLCcjDEjhjGAQaAvHYGgPD7cGUwcYP7nEUs8u6w3uaap9UZTf`
-* IntenseCoin (ITNS): `iz4fRGV8XsRepDtnK8XQDpHc3TbtciQWQ5Z9285qihDkCAvB9VX1yKt6qUCY6sp2TCC252SQLHrjmeLuoXsv4aF42YZtnZQ53`
-* Masari (MSR): `5n7mffxVT9USrq7tcG3TM8HL5yAz7MirUWypXXJfHrNfTcjNtDouLAAGex8s8htu4vBpmMXFzay8KG3jYGMFhYPr2aMbN6i`
-* Stellite (XTL): `Se45GzgpFG3CnvYNwEFnxiRHD2x7YzRnhFLdxjUqXdbv3ysNbfW5U7aUdn87RgMRPM7xwN6CTbXNc7nL5QUgcww11bDeypTe1`
-
-
 Credits
 ---------
 
-* [fancoder](//github.com/fancoder) - Developper on cryptonote-universal-pool project from which current project is forked.
+* [dvandal](//github.com/dvandal) - Developer on cryptonote-nodejs-pool project from which current project is forked.
+* [fancoder](//github.com/fancoder) - Developer on cryptonote-universal-pool project from which current project is forked.
 
 License
 -------

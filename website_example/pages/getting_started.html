@@ -5,16 +5,18 @@
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
                 <div><i class="fa fa-cloud"></i> <span tkey="miningPoolHost">Mining Pool Address</span>: <span id="miningPoolHost"></span></div>
-                <div><i class="fa fa-cubes"></i> <span tkey="cnAlgorithm">Algorithm</span>: Cryptonight Saber (AKA Cryptonight Heavy-Tube)</div>
+                <div><i class="fa fa-cubes"></i> <span tkey="cnAlgorithm">Algorithm</span>: <span id="cnAlgorithm"></span></div>
+                <div><i class="fa fa-code-branch"></i> <span>XMR-Node-Proxy: </span><span>Supported</span></div>
             </div>
         </div>
 
         <h4 class="push-up-15"><span tkey="username">Username<span></h4>
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
-                <div><i class="fa fa-key"></i> <span tkey="usernameDesc">This is your wallet address</span>(integrated address supported)</div>
+                <div><i class="fa fa-key"></i> <span tkey="usernameDesc">This is your wallet address</span></div>
                 <div id="paymentId"><i class="fa fa-exchange"></i> <span tkey="paymentId">Exchange Payment ID</span>: <span><u tkey="address">address</u><span id="paymentIdSeparator">.</span><u tkey="addrPaymentId">paymentID</u></span></div>
                 <div id="fixedDiff"><i class="fa fa-wrench"></i> <span tkey="fixedDiff">Difficulty locking</span>: <span><u tkey="address">address</u><span id="fixedDiffSeparator">+</span><u tkey="addrDiff">diff</u></span></div>
+                <div><i class="fa fa-compress"></i> <span>Integrated Address: </span><span>Supported</span></div>
             </div>
         </div>
 	    
@@ -318,7 +320,12 @@ currentPage = {
         algorithm = '';
         xmrstakAlgo = '';
 
-        if (cnAlgorithm == "cryptonight_light") {
+        if (cnAlgorithm == "bittube")
+        {
+            algorithm = 'Cryptonight Saber (AKA Cryptonight Heavy-Tube)';
+            xmrstakAlgo = 'bittube';
+        }
+        else if (cnAlgorithm == "cryptonight_light") {
             if (cnVariant === 1) {
                 algorithm = 'Cryptonight Light (Aeon v7)';
                 xmrstakAlgo = 'cryptonight_lite_v7';

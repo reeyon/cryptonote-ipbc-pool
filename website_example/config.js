@@ -1,10 +1,10 @@
-var api = "https://yourpool.com:8119";
+var api = "https://explorer2.xwp.fyi:8119";
 
 var coinDecimalPlaces = 2;
 
-var email = "";
+var email = "reeyonlim@gmail.com";
 var telegram = "";
-var discord = "";
+var discord = "https://discordapp.com/12345abcde";
 
 var marketCurrencies = ["{symbol}-BTC"];
 
